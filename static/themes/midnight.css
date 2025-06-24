@@ -1,0 +1,86 @@
+/* Midnight Theme - Blue accents with dark background */
+/* CSS variables are set via JavaScript in General.svelte */
+
+/* Blue accent colors for interactive elements */
+.midnight .bg-blue-500,
+.midnight .bg-blue-600,
+.midnight .text-blue-500,
+.midnight .text-blue-600 {
+	color: #4a9eff !important;
+}
+
+.midnight .bg-blue-500,
+.midnight .bg-blue-600 {
+	background-color: #4a9eff !important;
+}
+
+/* Hover states for blue elements */
+.midnight .hover\:bg-blue-600:hover {
+	background-color: #3a8ee6 !important;
+}
+
+.midnight .hover\:text-blue-400:hover {
+	color: #5ba7f7 !important;
+}
+
+/* Focus states with blue accents */
+.midnight .focus\:ring-blue-500:focus {
+	--tw-ring-color: #4a9eff !important;
+}
+
+.midnight .focus\:border-blue-500:focus {
+	border-color: #4a9eff !important;
+}
+
+/* Primary button styling with blue accents */
+.midnight .btn-primary,
+.midnight .bg-emerald-600,
+.midnight .bg-emerald-700 {
+	background-color: #4a9eff !important;
+	border-color: #4a9eff !important;
+	color: white !important;
+}
+
+.midnight .btn-primary:hover,
+.midnight .hover\:bg-emerald-700:hover {
+	background-color: #3a8ee6 !important;
+	border-color: #3a8ee6 !important;
+}
+
+/* Links with blue accents */
+.midnight a {
+	color: #5ba7f7 !important;
+}
+
+.midnight a:hover {
+	color: #80c2f6 !important;
+}
+
+/* Scrollbars with blue accent */
+.midnight ::-webkit-scrollbar-thumb {
+	background-color: #3a4f6f;
+	border: 2px solid #1a2332;
+}
+
+.midnight ::-webkit-scrollbar-thumb:hover {
+	background-color: #5ba7f7;
+}
+
+/* Icons and SVG elements with blue tint */
+.midnight svg,
+.midnight .w-4.h-4 {
+	fill: #5ba7f7 !important;
+	color: #5ba7f7 !important;
+}
+
+/* Special chat styling */
+.midnight .message {
+	border-left: 3px solid #4a9eff;
+}
+
+/* Active/selected states */
+.midnight .bg-gray-900:hover,
+.midnight .hover\:bg-gray-900:hover {
+	background-color: rgba(74, 158, 255, 0.1) !important;
+	border-left: 3px solid #5ba7f7;
+}

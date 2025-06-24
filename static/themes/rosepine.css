@@ -1,131 +1,253 @@
+/* Rose Pine Enhanced Theme - Beautiful color palette with improved contrast */
 .rose-pine * {
 	color: #e0def4 !important;
-	stroke: #907aa9 !important;
+	stroke: #c4a7e7 !important;
 }
 
 .rose-pine .app > * {
-	background-color: #1f1d2e !important;
+	background-color: #191724 !important;
 }
 
 .rose-pine #nav {
-	background-color: #191724;
+	background: linear-gradient(135deg, #191724 0%, #1f1d2e 100%);
+	border-right: 1px solid rgba(196, 167, 231, 0.1);
 }
 
 .rose-pine .py-2\.5.my-auto.flex.flex-col.justify-between.h-screen {
-	background: #191724;
+	background: linear-gradient(135deg, #191724 0%, #1f1d2e 100%);
 }
 
 .rose-pine .bg-white.dark\:bg-gray-800 {
 	background: #26233a;
+	border: 1px solid rgba(196, 167, 231, 0.1);
 }
 
 .rose-pine .w-4.h-4 {
 	fill: #c4a7e7;
+	filter: drop-shadow(0 0 2px rgba(196, 167, 231, 0.3));
 }
 
 .rose-pine #chat-input {
-	background: #393552;
+	background: linear-gradient(135deg, #393552 0%, #403d52 100%);
 	margin: 0.3rem;
 	padding: 0.5rem;
+	border: 1px solid rgba(235, 111, 146, 0.2);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .rose-pine .bg-gradient-to-t.from-white.dark\:from-gray-800.from-40\%.pb-2 {
-	background: #26233a !important;
+	background: linear-gradient(to top, #26233a 40%, rgba(38, 35, 58, 0.9) 100%) !important;
 	padding-top: 0.6rem;
 }
 
 .rose-pine
 	.text-white.bg-gray-100.dark\:text-gray-800.dark\:bg-gray-600.disabled.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
-	background-color: #6e6a86;
-	transition: background-color 0.2s ease-out linear;
+	background: linear-gradient(135deg, #6e6a86 0%, #56526e 100%);
+	transition: all 0.3s ease;
+	border: 1px solid rgba(196, 167, 231, 0.2);
 }
 
 .rose-pine
 	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
-	background-color: #286983;
-	transition: background-color 0.2s ease-out linear;
+	background: linear-gradient(135deg, #eb6f92 0%, #c4a7e7 100%);
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 6px rgba(235, 111, 146, 0.3);
+}
+
+.rose-pine
+	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center:hover {
+	background: linear-gradient(135deg, #c4a7e7 0%, #eb6f92 100%);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(235, 111, 146, 0.4);
 }
 
 .rose-pine
 	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center
 	> * {
-	fill: #9ccfd8 !important;
+	fill: #ffffff !important;
 	transition: fill 0.2s ease-out linear;
 }
 
 .rose-pine
 	.w-full.flex.justify-between.rounded-md.px-3.py-2.hover\:bg-gray-900.bg-gray-900.transition.whitespace-nowrap.text-ellipsis {
-	background-color: #56526e;
-	font-weight: bold;
+	background: linear-gradient(135deg, #56526e 0%, #6e6a86 100%);
+	font-weight: 600;
+	border: 1px solid rgba(235, 111, 146, 0.1);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .rose-pine .hover\:bg-gray-900:hover {
 	--tw-bg-opacity: 1;
-	background-color: rgb(57 53 82 / var(--tw-bg-opacity));
+	background: linear-gradient(135deg, #403d52 0%, #56526e 100%) !important;
+	transform: translateY(-1px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .rose-pine .text-xs.text-gray-700.uppercase.bg-gray-50.dark\:bg-gray-700.dark\:text-gray-400 {
-	background-color: #403d52;
+	background: linear-gradient(135deg, #403d52 0%, #524f67 100%);
+	color: #c4a7e7 !important;
+	font-weight: 500;
+	letter-spacing: 0.05em;
 }
 
 .rose-pine .scrollbar-hidden.relative.overflow-x-auto.whitespace-nowrap.svelte-3g4avz {
 	border-radius: 16px 16px 0 0;
+	background: linear-gradient(to right, rgba(235, 111, 146, 0.05), rgba(196, 167, 231, 0.05));
 }
 
 .rose-pine .base.enter.svelte-ug60r4 {
-	background-color: #393552;
+	background: linear-gradient(135deg, #393552 0%, #403d52 100%);
+	border: 1px solid rgba(196, 167, 231, 0.1);
 }
 
 .rose-pine .message.svelte-1nauejd {
 	color: #e0def4 !important;
+	background: rgba(26, 23, 36, 0.3);
+	border-radius: 12px;
+	padding: 8px 12px;
+	margin: 4px 0;
+	border-left: 3px solid #eb6f92;
 }
 
 .rose-pine #dropdownDots {
-	background-color: #403d52;
+	background: linear-gradient(135deg, #403d52 0%, #524f67 100%);
+	border: 1px solid rgba(196, 167, 231, 0.2);
+	border-radius: 8px;
 }
 
 .rose-pine .flex.py-2\.5.px-3\.5.w-full.hover\:bg-gray-800.transition:hover {
-	background: #524f67;
+	background: linear-gradient(135deg, #524f67 0%, #6e6a86 100%);
+	border-radius: 8px;
+	transform: translateX(4px);
+	border-left: 2px solid #eb6f92;
 }
 
 .rose-pine .m-auto.rounded-xl.max-w-full.w-\[40rem\].mx-2.bg-gray-50.dark\:bg-gray-900.shadow-3xl {
-	background-color: #26233a;
+	background: linear-gradient(135deg, #26233a 0%, #1f1d2e 100%);
+	border: 1px solid rgba(196, 167, 231, 0.2);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(235, 111, 146, 0.1);
 }
 
 .rose-pine
 	.w-full.rounded.p-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.resize-none {
-	background-color: #524f67;
+	background: linear-gradient(135deg, #524f67 0%, #403d52 100%);
+	border: 1px solid rgba(235, 111, 146, 0.2);
+	color: #e0def4 !important;
 }
 
 .rose-pine
 	.w-full.rounded.py-2.px-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.svelte-1vx7r9s {
-	background-color: #524f67;
+	background: linear-gradient(135deg, #524f67 0%, #403d52 100%);
+	border: 1px solid rgba(196, 167, 231, 0.2);
+	color: #e0def4 !important;
 }
 
 .rose-pine
 	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.bg-gray-200.dark\:bg-gray-700 {
-	background-color: #403d52;
+	background: linear-gradient(135deg, #403d52 0%, #56526e 100%);
+	border: 1px solid rgba(196, 167, 231, 0.1);
+	color: #c4a7e7 !important;
 }
 
 .rose-pine
 	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.hover\:bg-gray-300.dark\:hover\:bg-gray-800:hover {
-	background-color: #524f67;
+	background: linear-gradient(135deg, #524f67 0%, #6e6a86 100%);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 8px rgba(235, 111, 146, 0.2);
 }
 
 .rose-pine .px-4.py-2.bg-emerald-600.hover\:bg-emerald-700.text-gray-100.transition.rounded {
-	background-color: #31748f;
+	background: linear-gradient(135deg, #eb6f92 0%, #c4a7e7 100%);
+	color: #ffffff !important;
+	font-weight: 600;
+	box-shadow: 0 4px 12px rgba(235, 111, 146, 0.3);
+	transition: all 0.3s ease;
+}
+
+.rose-pine .px-4.py-2.bg-emerald-600.hover\:bg-emerald-700.text-gray-100.transition.rounded:hover {
+	background: linear-gradient(135deg, #c4a7e7 0%, #eb6f92 100%);
+	transform: translateY(-2px);
+	box-shadow: 0 6px 16px rgba(235, 111, 146, 0.4);
 }
 
 .rose-pine #chat-search > * {
-	background-color: #403d52 !important;
+	background: linear-gradient(135deg, #403d52 0%, #524f67 100%) !important;
+	border: 1px solid rgba(196, 167, 231, 0.2) !important;
+	color: #e0def4 !important;
 }
 
 .rose-pine .svelte-1ee93ns {
 	--primary: #eb6f92 !important;
 	--secondary: #e0def4 !important;
+	--accent: #c4a7e7 !important;
 }
 
 .rose-pine .svelte-11kvm4p {
-	--primary: #9ccfd8 !important;
+	--primary: #c4a7e7 !important;
 	--secondary: #1f1d2e !important;
+	--accent: #eb6f92 !important;
+}
+
+/* Additional enhancements for better visual hierarchy */
+.rose-pine input:focus,
+.rose-pine textarea:focus {
+	outline: none !important;
+	border-color: #eb6f92 !important;
+	box-shadow: 0 0 0 2px rgba(235, 111, 146, 0.2) !important;
+}
+
+.rose-pine button:focus {
+	outline: none !important;
+	box-shadow: 0 0 0 2px rgba(196, 167, 231, 0.3) !important;
+}
+
+.rose-pine .scrollbar::-webkit-scrollbar {
+	width: 6px;
+}
+
+.rose-pine .scrollbar::-webkit-scrollbar-track {
+	background: rgba(25, 23, 36, 0.5);
+}
+
+.rose-pine .scrollbar::-webkit-scrollbar-thumb {
+	background: linear-gradient(135deg, #eb6f92, #c4a7e7);
+	border-radius: 3px;
+}
+
+.rose-pine .scrollbar::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(135deg, #c4a7e7, #eb6f92);
+}
+
+/* Enhanced chat bubble styling */
+.rose-pine .prose {
+	color: #e0def4 !important;
+}
+
+.rose-pine .prose h1,
+.rose-pine .prose h2,
+.rose-pine .prose h3,
+.rose-pine .prose h4,
+.rose-pine .prose h5,
+.rose-pine .prose h6 {
+	color: #c4a7e7 !important;
+}
+
+.rose-pine .prose code {
+	background: rgba(57, 53, 82, 0.8) !important;
+	color: #eb6f92 !important;
+	padding: 2px 6px !important;
+	border-radius: 4px !important;
+	border: 1px solid rgba(235, 111, 146, 0.2) !important;
+}
+
+.rose-pine .prose pre {
+	background: linear-gradient(135deg, #1f1d2e 0%, #26233a 100%) !important;
+	border: 1px solid rgba(196, 167, 231, 0.2) !important;
+	border-radius: 8px !important;
+}
+
+.rose-pine .prose blockquote {
+	border-left: 4px solid #eb6f92 !important;
+	background: rgba(235, 111, 146, 0.05) !important;
+	color: #e0def4 !important;
 }

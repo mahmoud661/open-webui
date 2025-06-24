@@ -14,7 +14,7 @@
 	export let getModels: Function;
 
 	// General
-	let themes = ['dark', 'light', 'oled-dark'];
+	let themes = ['dark', 'light', 'oled-dark', 'midnight', 'rose-pine dark', 'rose-pine-dawn light'];
 	let selectedTheme = 'system';
 
 	let languages: Awaited<ReturnType<typeof getLanguages>> = [];
@@ -117,13 +117,36 @@
 	});
 
 	const applyTheme = (_theme: string) => {
+		// Reset all custom CSS variables first
+		const resetCSSVariables = () => {
+			document.documentElement.style.removeProperty('--color-gray-50');
+			document.documentElement.style.removeProperty('--color-gray-100');
+			document.documentElement.style.removeProperty('--color-gray-200');
+			document.documentElement.style.removeProperty('--color-gray-300');
+			document.documentElement.style.removeProperty('--color-gray-400');
+			document.documentElement.style.removeProperty('--color-gray-500');
+			document.documentElement.style.removeProperty('--color-gray-600');
+			document.documentElement.style.removeProperty('--color-gray-700');
+			document.documentElement.style.removeProperty('--color-gray-800');
+			document.documentElement.style.removeProperty('--color-gray-850');
+			document.documentElement.style.removeProperty('--color-gray-900');
+			document.documentElement.style.removeProperty('--color-gray-950');
+		};
+
+		resetCSSVariables();
+
 		let themeToApply = _theme === 'oled-dark' ? 'dark' : _theme;
 
 		if (_theme === 'system') {
 			themeToApply = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 		}
 
-		if (themeToApply === 'dark' && !_theme.includes('oled')) {
+		// Handle special themes that should keep their original name
+		if (_theme === 'midnight' || _theme.includes('rose-pine')) {
+			themeToApply = _theme;
+		}
+
+		if (themeToApply === 'dark' && !_theme.includes('oled') && _theme !== 'midnight') {
 			document.documentElement.style.setProperty('--color-gray-800', '#333');
 			document.documentElement.style.setProperty('--color-gray-850', '#262626');
 			document.documentElement.style.setProperty('--color-gray-900', '#171717');
@@ -141,6 +164,11 @@
 		themeToApply.split(' ').forEach((e) => {
 			document.documentElement.classList.add(e);
 		});
+
+		// Force dark class for midnight theme
+		if (_theme === 'midnight') {
+			document.documentElement.classList.add('dark');
+		}
 
 		const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 		if (metaThemeColor) {
@@ -160,7 +188,13 @@
 							? '#000000'
 							: _theme === 'her'
 								? '#983724'
-								: '#ffffff'
+								: _theme === 'midnight'
+									? '#0a0a0a'
+									: _theme === 'rose-pine dark'
+										? '#191724'
+										: _theme === 'rose-pine-dawn light'
+											? '#faf4ed'
+											: '#ffffff'
 				);
 			}
 		}
@@ -177,7 +211,56 @@
 			document.documentElement.classList.add('dark');
 		}
 
-		console.log(_theme);
+		// Apply midnight theme colors using CSS variables (like OLED)
+		if (_theme === 'midnight') {
+			document.documentElement.style.setProperty('--color-gray-50', '#e8f4fd');
+			document.documentElement.style.setProperty('--color-gray-100', '#d4e8fc');
+			document.documentElement.style.setProperty('--color-gray-200', '#b8dcfa');
+			document.documentElement.style.setProperty('--color-gray-300', '#9ccff8');
+			document.documentElement.style.setProperty('--color-gray-400', '#80c2f6');
+			document.documentElement.style.setProperty('--color-gray-500', '#5ba7f7');
+			document.documentElement.style.setProperty('--color-gray-600', '#4a9eff');
+			document.documentElement.style.setProperty('--color-gray-700', '#3a4f6f');
+			document.documentElement.style.setProperty('--color-gray-800', '#2a3648');
+			document.documentElement.style.setProperty('--color-gray-850', '#1e2a3a');
+			document.documentElement.style.setProperty('--color-gray-900', '#1a2332');
+			document.documentElement.style.setProperty('--color-gray-950', '#0f1419');
+			document.documentElement.classList.add('dark');
+		}
+
+		// Apply Rose Pine theme colors using CSS variables
+		if (_theme === 'rose-pine dark') {
+			document.documentElement.style.setProperty('--color-gray-50', '#e0def4');
+			document.documentElement.style.setProperty('--color-gray-100', '#c4a7e7');
+			document.documentElement.style.setProperty('--color-gray-200', '#9ccfd8');
+			document.documentElement.style.setProperty('--color-gray-300', '#eb6f92');
+			document.documentElement.style.setProperty('--color-gray-400', '#f6c177');
+			document.documentElement.style.setProperty('--color-gray-500', '#ebbcba');
+			document.documentElement.style.setProperty('--color-gray-600', '#6e6a86');
+			document.documentElement.style.setProperty('--color-gray-700', '#56526e');
+			document.documentElement.style.setProperty('--color-gray-800', '#403d52');
+			document.documentElement.style.setProperty('--color-gray-850', '#2a273f');
+			document.documentElement.style.setProperty('--color-gray-900', '#26233a');
+			document.documentElement.style.setProperty('--color-gray-950', '#191724');
+			document.documentElement.classList.add('dark');
+		}
+
+		// Apply Rose Pine Dawn theme colors using CSS variables
+		if (_theme === 'rose-pine-dawn light') {
+			document.documentElement.style.setProperty('--color-gray-50', '#faf4ed');
+			document.documentElement.style.setProperty('--color-gray-100', '#f2e9e1');
+			document.documentElement.style.setProperty('--color-gray-200', '#e4dfdb');
+			document.documentElement.style.setProperty('--color-gray-300', '#d7d3ce');
+			document.documentElement.style.setProperty('--color-gray-400', '#c9c4bf');
+			document.documentElement.style.setProperty('--color-gray-500', '#9893a5');
+			document.documentElement.style.setProperty('--color-gray-600', '#797593');
+			document.documentElement.style.setProperty('--color-gray-700', '#575279');
+			document.documentElement.style.setProperty('--color-gray-800', '#403d52');
+			document.documentElement.style.setProperty('--color-gray-850', '#2a2837');
+			document.documentElement.style.setProperty('--color-gray-900', '#1f1d2e');
+			document.documentElement.style.setProperty('--color-gray-950', '#191724');
+			document.documentElement.classList.remove('dark');
+		}
 	};
 
 	const themeChangeHandler = (_theme: string) => {
@@ -208,8 +291,9 @@
 						<option value="oled-dark">🌃 {$i18n.t('OLED Dark')}</option>
 						<option value="light">☀️ {$i18n.t('Light')}</option>
 						<option value="her">🌷 Her</option>
-						<!-- <option value="rose-pine dark">🪻 {$i18n.t('Rosé Pine')}</option>
-						<option value="rose-pine-dawn light">🌷 {$i18n.t('Rosé Pine Dawn')}</option> -->
+						<option value="midnight">🌌 Midnight</option>
+						<option value="rose-pine dark">🪻 {$i18n.t('Rosé Pine')}</option>
+						<option value="rose-pine-dawn light">🌷 {$i18n.t('Rosé Pine Dawn')}</option>
 					</select>
 				</div>
 			</div>
